@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+}
+
+.header-container {
+    display: flex;
+    margin-top: 14px;
+}
+
+.logo-img {
+    width: 48px;
+}
+
+.menu-button {
+    margin-left: auto;
+    background-color: var(--main-background-color);
+
+}
+
+.menu-icon {
+    fill: #fff;
+}

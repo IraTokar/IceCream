@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IceCream</title>
+
+    <link />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-container">
+        <a class="logo link" href="#">
+          <img
+            class="logo-img"
+            src="./images/logo/logo-sm.png"
+            alt="Log IceCream"
+            width="48"
+            height="44"
+          />
+        </a>
+
+        <button class="menu-button button" type="button">
+          <svg class="menu-icon" width="32" height="32">
+            <use href="./images/sprite.svg#icon-open"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero section -->
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">ice cream made with passion</h1>
+          <button class="button-hero button" type="button">Products</button>
+          <button class="button-anchor button" type="button">How it’s made?</button>
+          <img class="hero-img" src="./images/hero/ice-cream-480.png" alt="Image Ice cream" />
+        </div>
+      </section>
+
+      <!-- products section -->
+      <section class="products">
+        <div class="container">
+          <p class="products-appertitle">100% natural</p>
+          <h2 class="products-title">products</h2>
+
+          <ul class="products-cart list">
+            <li class="products-item ice-cream-item">
+              <div class="products-circle circle-ice-cream"></div>
+              <h3 class="cart-title">ice cream</h3>
+              <p class="cart-description">
+                Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural
+                stabilizer
+              </p>
+              <button class="button-cart-desc button" type="button">
+                <svg class="arrow-icon" width="40" height="16">
+                  <use href="./images/sprite.svg#icon-Arrow"></use>
+                </svg>
+              </button>
+            </li>
+
+            <li class="products-item ice-coffe-item">
+              <div class="products-circle circle-ice-coffe"></div>
+              <h3 class="cart-title">ice coffee</h3>
+              <p class="cart-description">
+                Fragrant invigorating drink created from 100% natural ingredients without the use of
+                preservatives and flavor enhancers
+              </p>
+              <button class="button-cart-desc button" type="button">
+                <svg class="arrow-icon" width="40" height="16">
+                  <use href="./images/sprite.svg#icon-Arrow"></use>
+                </svg>
+              </button>
+            </li>
+
+            <li class="products-item milkshakes-item">
+              <div class="products-circle circle-milkshakes"></div>
+              <h3 class="cart-title">milkshakes</h3>
+              <p class="cart-description">
+                Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries
+                and other sweets of your choice
+              </p>
+              <button class="button-cart-desc button" type="button">
+                <svg class="arrow-icon" width="40" height="16">
+                  <use href="./images/sprite.svg#icon-Arrow"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- about section -->
+      <section class="about">
+        <div class="container">
+          <p class="about-appertitle">tradition and love</p>
+          <h2 class="about-title">how it’s made?</h2>
+          <div class="about-circle"></div>
+          <div class="about-text">
+            <p class="about-desc">
+              Ice is a place where you will become not only a little happier, but also healthier.
+              Health is the main value for us, and we follow it when creating our handmade desserts.
+            </p>
+            <p class="about-desc">
+              We use traditional recipes and 100% natural ingredients. Our products are so natural
+              that they can be given to children from the age of three years. Sweets lovers can
+              expect 55 types of ice cream, 15 types of coffee and 23 milkshakes.
+            </p>
+            <p class="about-desc">This is enough to choose ice cream and coffee for any mood!</p>
+          </div>
+          <button class="button-about button" type="button">
+            Read more
+            <svg class="about-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- adventages section -->
+      <section class="advantages">
+        <div class="container advantages-container">
+          <h2 class="visually-hidden">advantages</h2>
+          <ul class="advantages-list list">
+            <li class="advantages-item">
+              <div class="advantages-circle circle-caw"></div>
+              <p class="advantages-number">721</p>
+              <p class="advantages-item-desc">
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+            </li>
+            <li class="advantages-item">
+              <div class="advantages-circle circle-weight"></div>
+              <p class="advantages-number">16kg</p>
+              <p class="advantages-item-desc">
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+            </li>
+            <li class="advantages-item">
+              <div class="advantages-circle circle-ice-crema"></div>
+              <p class="advantages-number">84</p>
+              <p class="advantages-item-desc">
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Gallery section -->
+      <div class="gallery-wrapper">
+        <section class="gallery">
+          <div class="container">
+            <h2 class="gallery-title visually-hidden">gallery</h2>
+            <img
+              class="gallery-img"
+              src="./images/gallery/gallery.png"
+              alt=""
+              width="440"
+              height="204"
+            />
+          </div>
+        </section>
+      </div>
+
+      <!-- Customer-reviews section -->
+      <section class="customer-reviews">
+        <div class="container">
+          <div class="customer-review">
+            <h2 class="customer-title visually-hidden">customer-review</h2>
+            <img
+              class="customer-img"
+              src="./images/customer-reviews/customer-1.jpg"
+              alt=""
+              width="85"
+              height="85"
+            />
+            <div class="desc-container">
+              <p class="customer-desc">
+                I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles!
+                In addition, you have beautiful serving, cozy atmosphere and polite staff.
+              </p>
+            </div>
+            <p class="customer-info">Emily, Los Angeles</p>
+          </div>
+          <ul class="customer-buttons list">
+            <li class="customer-button-item">
+              <button class="customer-button active-button"></button>
+            </li>
+            <li class="customer-button-item">
+              <button class="customer-button"></button>
+            </li>
+            <li class="customer-button-item">
+              <button class="customer-button"></button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contacts section -->
+      <section class="contacts">
+        <div class="container contacts-container">
+          <h2 class="contacts-title visually-hidden">our contacts</h2>
+          <ul class="contacts-list list">
+            <li class="contacts-item">
+              <p class="contacts-category">CAFE</p>
+              <p class="contact-city">Chicago</p>
+              <div class="contact-map-box">
+                <a
+                  class="contact-map link"
+                  href="https://maps.app.goo.gl/x9YCzyZDtiGtqjPc9"
+                  target="_blank"
+                >
+                  10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA
+                </a>
+              </div>
+              <ul class="contact-hours-list list">
+                <li class="contact-hour-item">
+                  <p class="contact-days">Monday - Friday</p>
+                  <p class="contact-hour">06:00 AM - 10:00 PM</p>
+                </li>
+                <li class="contact-hour-item">
+                  <p class="contact-days">Saturday - Sunday</p>
+                  <p class="contact-hour">08:00 AM - 16:00 PM</p>
+                </li>
+              </ul>
+              <a class="contact-tel link" href="tel:+610383766284">+61(0) 383 766 284</a>
+              <a class="contact-mail link" href="mailto:noreply@envato.com">noreply@envato.com</a>
+            </li>
+
+            <li class="contacts-item">
+              <p class="contacts-category">FOODTRUCK</p>
+              <p class="contact-city">Los Angeles</p>
+              <div class="contact-map-box">
+                <a
+                  class="contact-map link"
+                  href="https://maps.app.goo.gl/mbtnMjF8NjeaYm987"
+                  target="_blank"
+                >
+                  1003 Manhattan Ave, Manhattan Beach, CA 90263, USA
+                </a>
+              </div>
+              <ul class="contact-hours-list list">
+                <li class="contact-hour-item">
+                  <p class="contact-days">Monday - Friday</p>
+                  <p class="contact-hour">06:00 AM - 10:00 PM</p>
+                </li>
+                <li class="contact-hour-item">
+                  <p class="contact-days">Saturday - Sunday</p>
+                  <p class="contact-hour">08:00 AM - 16:00 PM</p>
+                </li>
+              </ul>
+              <a class="contact-tel link" href="tel:+610383766284">+61(0) 383 766 284</a>
+              <a class="contact-mail link" href="mailto:noreply@envato.com">noreply@envato.com</a>
+            </li>
+
+            <li class="contacts-item">
+              <p class="contacts-category">CAFE</p>
+              <p class="contact-city">New York</p>
+              <div class="contact-map-box">
+                <a
+                  class="contact-map link"
+                  href="https://maps.app.goo.gl/ngLSJYx9RDrGV8bh8"
+                  target="_blank"
+                >
+                  1726 Sterling Pl, Brooklyn, NY 11222, USA
+                </a>
+              </div>
+              <ul class="contact-hours-list list">
+                <li class="contact-hour-item">
+                  <p class="contact-days">Monday - Friday</p>
+                  <p class="contact-hour">06:00 AM - 10:00 PM</p>
+                </li>
+                <li class="contact-hour-item">
+                  <p class="contact-days">Saturday - Sunday</p>
+                  <p class="contact-hour">08:00 AM - 16:00 PM</p>
+                </li>
+              </ul>
+              <a class="contact-tel link" href="tel:+610383766284">+61(0) 383 766 284</a>
+              <a class="contact-mail link" href="mailto:noreply@envato.com">noreply@envato.com</a>
+            </li>
+          </ul>
+
+          <ul class="contacts-buttons list">
+            <li class="contact-button-item">
+              <button class="contacts-button-location button" type="button">
+                Our Locations
+                <svg class="about-icon" width="12" height="12">
+                  <use href="./images/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="contact-button-item">
+              <button class="contacts-button-franchise button" type="button">
+                Franchise
+                <svg class="about-icon" width="12" height="12">
+                  <use href="./images/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-desc">homemade ice cream made</p>
+        <p class="footer-text">with passion</p>
+        <ul class="footer-socials list">
+          <li class="footer-social">
+            <a class="footer-social-link link" href="">
+              <svg class="footer-social-icon" width="34" height="34">
+                <use href="./images/sprite.svg#icon-github"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social">
+            <a class="footer-social-link link" href="">
+              <svg class="footer-social-icon" width="34" height="34">
+                <use href="./images/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social">
+            <a class="footer-social-link link" href="">
+              <svg class="footer-social-icon" width="34" height="34">
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="footer-contacts">
+          <p class="footer-tel-desc">Feel free to contact</p>
+          <a class="footer-tel link" href="tel:+610383766284">+61(0) 383 766 284</a>
+        </div>
+      </div>
+      <div class="footer-copyright-wrapper">
+        <p class="footer-copyright">© 2022 - IceCream.</p>
+        <p class="footer-copyright">All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

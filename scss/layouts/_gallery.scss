@@ -1,0 +1,14 @@
+.gallery-wrapper {
+    position: relative;
+}
+
+.gallery {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateY(-49px);
+}
+
+.gallery-img {
+    border-radius: 8px;
+}

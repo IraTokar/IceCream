@@ -1,0 +1,104 @@
+.about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 100px;
+    padding-left: 100px;
+
+    display: flex;
+    position: relative;
+}
+
+.about-appertitle {
+    color: var(--main-text-color);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+    width: 210px;
+}
+
+.about-title {
+    color: var(--main-text-color);
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    margin-bottom: 372px;
+    width: 210px;
+}
+
+.about-circle {
+    width: 278px;
+    height: 278px;
+    border-radius: 50%;
+
+    position: absolute;
+    right: 100px;
+    top: 240px;
+
+    background: linear-gradient(0deg, rgba(248, 210, 78, 0.70) 0%, rgba(248, 210, 78, 0.70) 100%),
+        #D9D9D9;
+    
+    box-shadow: 0px 4.48583px 16.82185px 0px rgba(153, 114, 23, 0.25);
+ 
+    &::before {
+        position: absolute;
+        right: 0px;
+        top: 22px;
+        content: '';
+
+        width: 278px;
+        height: 278px;
+
+        background-image: url(../images/about/caw-sm.png);
+        background-size: cover;
+    }
+}
+
+.about-text {
+    gap: 4px;
+
+    margin-bottom: 24px;
+}
+
+.about-desc {
+    color: var(--main-text-color);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2.11;
+    letter-spacing: 0.48px;
+
+    
+}
+
+.button-about {
+    border-radius: 10px;
+    background: var(--accent-color);
+    
+    display: flex;
+    align-items: center;
+
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.29;
+
+    padding: 12px 34px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-icon {
+    fill: #000;
+    margin-left: 4px;
+}
