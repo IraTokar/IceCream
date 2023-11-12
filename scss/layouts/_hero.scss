@@ -8,6 +8,43 @@
 
     position: relative;
 
+    @include mq(retina) {
+        background: url(../images/hero/background-480@2x.png) no-repeat right bottom;
+        background-size: 330px;
+    }
+
+    @include mq(min-only) {
+        background: url(../images/hero/background-sm.png) no-repeat right bottom;
+        background-size: 320px;
+
+        height: 440px;
+
+        @include mq(retina) {
+            background: url(../images/hero/background-sm@2x.png) no-repeat right bottom;
+            background-size: 330px;
+        }
+    }
+
+    @include mq(tablet-only) {
+        background: url(../images/hero/background-md.png) no-repeat right bottom;
+        // background-size: 320px;
+
+        @include mq(retina) {
+            background: url(../images/hero/background-md@2x.png) no-repeat right bottom;
+            // background-size: 330px;
+        }
+    }
+
+    @include mq(desktop) {
+        background: url(../images/hero/background-lg.png) no-repeat right bottom;
+        // background-size: 320px;
+
+        @include mq(retina) {
+            background: url(../images/hero/background-lg@2x.png) no-repeat right bottom;
+            // background-size: 330px;
+        }
+    }
+
 }
 
 .hero-title {
@@ -55,4 +92,11 @@
 
     width: 218px;
     height: 267px;
+
+    @include mq(min-only) {
+        width: 177px;
+        height: 217px;
+
+        right: 56px;
+    }
 }

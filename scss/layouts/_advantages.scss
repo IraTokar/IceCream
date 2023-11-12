@@ -1,6 +1,11 @@
 .advantages-container {
     padding: 0px 100px;
     padding-bottom: 81px;
+
+    @include mq(min-only) {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
 }
 
 .advantages-list {
@@ -29,6 +34,10 @@
     background-color: var(--accent-color);
 
     margin-bottom: 16px;
+
+    @include mq(min-only) {
+        right: -90px;
+    }
 
     &::before {
         position: absolute;

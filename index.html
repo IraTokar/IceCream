@@ -54,7 +54,22 @@
           <h1 class="hero-title">ice cream made with passion</h1>
           <button class="button-hero button" type="button">Products</button>
           <button class="button-anchor button" type="button">How it’s made?</button>
-          <img class="hero-img" src="./images/hero/ice-cream-480.png" alt="Image Ice cream" />
+          <img
+            class="hero-img"
+            srcset="
+              ./images/hero/ice-cream-sm.png    177w,
+              ./images/hero/ice-cream-sm@2x.png 354w,
+              ./images/hero/ice-cream-480.png   218w,
+              ./images/hero/ice-cream-480@2x.png 436w,
+              ./images/hero/ice-cream-md.png    268w,
+              ./images/hero/ice-cream-md@2x.png 536w
+              ./images/hero/ice-cream-lg.png 456w,
+              ./images/hero/ice-cream-lg@2x.png 912w,
+            "
+            sizes="(min-width:1200px) 456px, (min-width:768px) 268px, (min-width:767px) 218px, (max-width:479px) 177px, 100vw"
+            src="./images/hero/ice-cream-480.png"
+            alt="Image Ice cream"
+          />
         </div>
       </section>
 
@@ -330,21 +345,21 @@
         <p class="footer-text">with passion</p>
         <ul class="footer-socials list">
           <li class="footer-social">
-            <a class="footer-social-link link" href="">
+            <a class="footer-social-link link" href="#">
               <svg class="footer-social-icon" width="34" height="34">
                 <use href="./images/sprite.svg#icon-github"></use>
               </svg>
             </a>
           </li>
           <li class="footer-social">
-            <a class="footer-social-link link" href="">
+            <a class="footer-social-link link" href="#">
               <svg class="footer-social-icon" width="34" height="34">
                 <use href="./images/sprite.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
           <li class="footer-social">
-            <a class="footer-social-link link" href="">
+            <a class="footer-social-link link" href="#">
               <svg class="footer-social-icon" width="34" height="34">
                 <use href="./images/sprite.svg#icon-facebook"></use>
               </svg>

@@ -1,7 +1,5 @@
 .footer {
     margin-top: -340px;
-
-    padding-bottom: 24px;
 }
 
 .footer-desc {
@@ -67,6 +65,11 @@
     padding: 20px 121px 24px 79px;
 
     border-top: 1px solid #E1E1E1;
+
+    @include mq(min-only) {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
     
 }
 
@@ -76,5 +79,4 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 2.13;
 }

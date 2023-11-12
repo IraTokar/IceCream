@@ -6,4 +6,16 @@
     margin-right: auto;
 
     width: 480px;
+
+    @include mq(min-only) {
+        width: 320px;
+    }
+
+    @include mq(tablet) {
+        width: 768px;
+    }
+
+    @include mq(desktop) {
+        width: 1200px;
+    }
 }
