@@ -9,10 +9,23 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    @include mq(tablet-only) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 }
 
 .contacts-list {
     margin-bottom: 24px;
+
+    @include mq(tablet-only) {
+        display: flex;
+        justify-content: center;
+
+        gap: 16px;
+        margin-bottom: 40px;
+    }
 }
 
 .contacts-item {
@@ -24,6 +37,16 @@
 
     &:not(:last-child) {
         margin-bottom: 16px;
+
+        @include mq(tablet-only) {
+            margin-bottom: 0px;
+        }
+    }
+
+    @include mq(tablet-only) {
+        flex-basis: calc((100% - 2*16px)/3);
+        padding: 40px 24px 40px 24px;
+        width: 224px;
     }
 }
 
@@ -41,6 +64,16 @@
     background: var(--accent-color);
         
     margin-bottom: 20px;
+
+    @include mq(tablet-only) {
+        font-size: 16px;
+        // line-height: 2.24;
+        letter-spacing: 0.64px;
+
+        padding: 4px 13px;
+        margin-bottom: 32px;
+        border-radius: 6px;
+    }
 }
 
 .contact-city {
@@ -51,10 +84,23 @@
     letter-spacing: 0.48px;
 
     margin-bottom: 8px;
+
+    @include mq(tablet-only) {
+        font-size: 14px;
+        
+        letter-spacing: 0.56px;
+
+        margin-bottom: 12px;
+    }
 }
+
 
 .contact-map-box {
     margin-bottom: 48px;
+
+    @include mq(tablet-only) {
+        margin-bottom: 64px;
+    }
 }
 
 .contact-map {
@@ -63,12 +109,22 @@
     font-weight: 500;
     line-height: 2.2;
     letter-spacing: 0.48px;
+
+    @include mq(tablet-only) {
+        font-size: 14px;
+        line-height: 2.56;
+        letter-spacing: 0.56px;
+    }
 }
 
 .contact-hours-list {
     position: relative;
 
     margin-bottom: 48px;
+
+    @include mq(tablet-only) {
+        margin-bottom: 64px;
+    }
 
     &::before {
         position: absolute;
@@ -77,6 +133,11 @@
         width: 216px;
         height: 1px;
         background-color: #e1e1e1;
+
+        @include mq(tablet-only) {
+            top: -32px;
+            width: 176px;
+        }
     }
 
     &::after {
@@ -86,6 +147,11 @@
         width: 216px;
         height: 1px;
         background-color: #e1e1e1;
+
+        @include mq(tablet-only) {
+            bottom: -32px;
+            width: 176px;
+        }
     }
 
 }
@@ -101,6 +167,11 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 2.23;
+
+    @include mq(tablet-only) {
+        font-size: 14px;
+        line-height: 2.6;
+    }
 } 
 
 .contact-hour {
@@ -108,6 +179,11 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 2.23;
+
+    @include mq(tablet-only) {
+        font-size: 14px;
+        line-height: 2.6;
+    }
 }
 
 .contact-tel, .contact-mail{
@@ -116,13 +192,30 @@
     font-style: normal;
     font-weight: 500;
     line-height: 1.92; 
+
+    @include mq(tablet-only) {
+        font-size: 14px;
+        line-height: 2.1;
+    }
 }
 
 .contact-tel {
     margin-bottom: 6px;
+
+    @include mq(tablet-only) {
+        margin-bottom: 4px;
+    }
 }
 
 // Contacts buttons
+
+.contacts-buttons {
+    @include mq(tablet-only) {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+}
 
 .contacts-button-location {
     padding: 15px 34px;
@@ -145,6 +238,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 16px;
+
 }
 
 .contacts-button-franchise {
@@ -169,5 +263,9 @@
     margin-left: auto;
 
     margin-bottom: 60px;
+
+    @include mq(tablet-only) {
+        margin-bottom: 40px;
+    }
 }
 

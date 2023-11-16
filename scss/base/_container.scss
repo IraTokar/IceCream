@@ -15,6 +15,11 @@
         width: 768px;
     }
 
+    @include mq(tablet-only) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
     @include mq(desktop) {
         width: 1200px;
     }

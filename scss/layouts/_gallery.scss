@@ -7,6 +7,10 @@
     top: 0;
     bottom: 0;
     transform: translateY(-49px);
+
+    @include mq(tablet-only) {
+        transform: translateY(-144px);
+    }
 }
 
 .gallery-img {

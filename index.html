@@ -43,6 +43,13 @@
             <use href="./images/sprite.svg#icon-open"></use>
           </svg>
         </button>
+
+        <button class="header-button button">
+          Buy now
+          <svg class="about-icon" width="12" height="12">
+            <use href="./images/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -51,25 +58,81 @@
       <!-- Hero section -->
       <section class="hero">
         <div class="container">
-          <h1 class="hero-title">ice cream made with passion</h1>
-          <button class="button-hero button" type="button">Products</button>
-          <button class="button-anchor button" type="button">How it’s made?</button>
-          <img
-            class="hero-img"
-            srcset="
-              ./images/hero/ice-cream-sm.png    177w,
-              ./images/hero/ice-cream-sm@2x.png 354w,
-              ./images/hero/ice-cream-480.png   218w,
-              ./images/hero/ice-cream-480@2x.png 436w,
-              ./images/hero/ice-cream-md.png    268w,
-              ./images/hero/ice-cream-md@2x.png 536w
-              ./images/hero/ice-cream-lg.png 456w,
-              ./images/hero/ice-cream-lg@2x.png 912w,
-            "
-            sizes="(min-width:1200px) 456px, (min-width:768px) 268px, (min-width:767px) 218px, (max-width:479px) 177px, 100vw"
-            src="./images/hero/ice-cream-480.png"
-            alt="Image Ice cream"
-          />
+          <div class="hero-content">
+            <div>
+              <h1 class="hero-title">ice cream made with passion</h1>
+              <button class="button-hero button" type="button">Products</button>
+              <button class="button-anchor button" type="button">How it’s made?</button>
+            </div>
+            <ul class="header-statistics list">
+              <li class="header-statistics-item">
+                <span class="statistics-number"> 16</span>
+                <p class="statistics-desc">cafes</p>
+              </li>
+              <li class="header-statistics-item">
+                <span class="statistics-number">23</span>
+                <p class="statistics-desc">food trucks</p>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-hidden-content">
+            <picture>
+              <source
+                srcset="
+                  ./images/hero/many-ice-cream-lg.png  1x,
+                  images/hero/many-ice-cream-lg@2x.png 2x
+                "
+                sizes="(min-width:1200px) 456px"
+                type="image/png"
+              />
+              <source
+                srcset="
+                  ./images/hero/many-ice-cream-md.png  1x,
+                  images/hero/many-ice-cream-md@2x.png 2x
+                "
+                sizes="(min-width:768px) 268px"
+                type="image/png"
+              />
+              <img
+                class="hero-ice-cream"
+                src="./images/hero/many-ice-cream-md.png"
+                alt="plate with Ice cream"
+              />
+            </picture>
+
+            <div class="hero-text">
+              <p>
+                Indulge in a scoop of ice cream made with passion and treat your taste buds to an
+                unforgettable experience!
+              </p>
+              <svg class="arrow-icon hero-arrow-icon" width="40" height="16">
+                <use href="./images/sprite.svg#icon-Arrow"></use>
+              </svg>
+            </div>
+          </div>
+
+          <picture>
+            <source
+              srcset="./images/hero/ice-cream-lg.png 1x, ./images/hero/ice-cream-lg@2x.png 2x"
+              sizes="(min-width:1200px) 456px"
+              type="image/png"
+            />
+            <source
+              srcset="./images/hero/ice-cream-md.png 1x, ./images/hero/ice-cream-md@2x.png 2x"
+              sizes="(min-width:768px) 268px"
+              type="image/png"
+            />
+            <source
+              srcset="./images/hero/ice-cream-480.png 1x, ./images/hero/ice-cream-480@2x.png 2x"
+              sizes="(min-width:480px) 218px"
+              type="image/png"
+            />
+            <source
+              srcset="./images/hero/ice-cream-sm.png 1x, ./images/hero/ice-cream-sm@2x.png 2x"
+              type="image/png"
+            />
+            <img class="hero-img" src="./images/hero/ice-cream-sm.png" alt="Image Ice cream" />
+          </picture>
         </div>
       </section>
 
@@ -130,25 +193,36 @@
         <div class="container">
           <p class="about-appertitle">tradition and love</p>
           <h2 class="about-title">how it’s made?</h2>
-          <div class="about-circle"></div>
-          <div class="about-text">
-            <p class="about-desc">
-              Ice is a place where you will become not only a little happier, but also healthier.
-              Health is the main value for us, and we follow it when creating our handmade desserts.
-            </p>
-            <p class="about-desc">
-              We use traditional recipes and 100% natural ingredients. Our products are so natural
-              that they can be given to children from the age of three years. Sweets lovers can
-              expect 55 types of ice cream, 15 types of coffee and 23 milkshakes.
-            </p>
-            <p class="about-desc">This is enough to choose ice cream and coffee for any mood!</p>
+          <div class="about-content">
+            <div class="about-circle"></div>
+            <ul class="about-text list">
+              <li class="about-content-item">
+                <p class="about-desc">
+                  Ice is a place where you will become not only a little happier, but also
+                  healthier. Health is the main value for us, and we follow it when creating our
+                  handmade desserts.
+                </p>
+              </li>
+              <li class="about-content-item">
+                <p class="about-desc">
+                  We use traditional recipes and 100% natural ingredients. Our products are so
+                  natural that they can be given to children from the age of three years. Sweets
+                  lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes.
+                </p>
+              </li>
+              <li class="about-content-item">
+                <p class="about-desc">
+                  This is enough to choose ice cream and coffee for any mood!
+                </p>
+              </li>
+            </ul>
+            <button class="button-about button" type="button">
+              Read more
+              <svg class="about-icon" width="12" height="12">
+                <use href="./images/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
           </div>
-          <button class="button-about button" type="button">
-            Read more
-            <svg class="about-icon" width="12" height="12">
-              <use href="./images/sprite.svg#icon-arrow-right"></use>
-            </svg>
-          </button>
         </div>
       </section>
 

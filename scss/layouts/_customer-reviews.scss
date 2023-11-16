@@ -16,6 +16,11 @@
         padding-left: 0px;
         padding-right: 0px;
     }
+
+    @include mq(tablet-only) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
 
 .customer-img {
@@ -34,6 +39,10 @@
     padding: 35px 39px;
 
     margin-bottom: 32px;
+
+    @include mq(tablet-only) {
+        padding: 28px 80px;
+    }
 }
 
 .customer-desc {
@@ -42,6 +51,14 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 3.06;
+
+    @include mq(tablet-only) {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2.6;
+        letter-spacing: 0.56px;
+    }
 }
 
 .customer-info {
@@ -52,6 +69,12 @@
     line-height: 1.86;
 
     margin-bottom: 12px;
+
+    @include mq(tablet-only) {
+        font-size: 16px;
+        
+        margin-bottom: 32px;
+    }
 }
 
 .customer-buttons {
