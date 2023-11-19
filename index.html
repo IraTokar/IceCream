@@ -38,6 +38,21 @@
           />
         </a>
 
+        <ul class="header-navigation list">
+          <li class="header-navigation-item">
+            <a class="header-navigation-link link" href="#">Home</a>
+          </li>
+          <li class="header-navigation-item">
+            <a class="header-navigation-link link" href="#">How it’s made?</a>
+          </li>
+          <li class="header-navigation-item">
+            <a class="header-navigation-link link" href="#">Our products</a>
+          </li>
+          <li class="header-navigation-item">
+            <a class="header-navigation-link link" href="#">Contact</a>
+          </li>
+        </ul>
+
         <button class="menu-button button" type="button">
           <svg class="menu-icon" width="32" height="32">
             <use href="./images/sprite.svg#icon-open"></use>
@@ -261,12 +276,50 @@
         <section class="gallery">
           <div class="container">
             <h2 class="gallery-title visually-hidden">gallery</h2>
+            <!-- <picture>
+              <source
+                srcset="./images/gallery/gallery-sm.png 1x, ./images/gallery/gallery-sm@2x.png 2x"
+                sizes="(max-width:479px) 280px"
+                type="image/png"
+              />
+              <source
+                srcset="./images/gallery/gallery-480.png 1x, ./images/gallery/gallery-480@2x.png 2x"
+                sizes="(min-width:480px) 440px"
+                type="image/png"
+              />
+              <source
+                srcset="./images/gallery/gallery-md.png 1x, ./images/gallery/gallery-md@2x.png 2x"
+                sizes="(min-width:768px) 704px"
+                type="image/png"
+              />
+              <source
+                srcset="./images/gallery/gallery-lg.png 1x, ./images/gallery/gallery-lg@2x.png 2x"
+                sizes="(min-width:1200px) 1013"
+                type="image/png"
+              />
+
+              <img
+                class="gallery-img"
+                src="./images/gallery/gallery-sm.png"
+                alt="Image Ice cream"
+              />
+            </picture> -->
             <img
               class="gallery-img"
-              src="./images/gallery/gallery.png"
-              alt=""
-              width="440"
-              height="204"
+              srcset="
+                  ./images/gallery/gallery-sm.png    280w,
+                  ./images/gallery/gallery-sm@2x.png 560w,
+                  ./images/gallery/gallery-480.png   440w,
+                  ./images/gallery/gallery-480@2x.png 880,
+                  ./images/gallery/gallery-md.png    704w,
+                  ./images/gallery/gallery-md@2x.png 1408w,
+                  ./images/gallery/gallery-lg.png 1013w,
+                  ./images/gallery/gallery-lg@2x.png 2026w
+
+                "
+              sizes="(min-width:1200px) 1013px, (min-width:768px) 704px, (min-width:480px) 440px, 100vw"
+              src="./images/gallery/gallery-sm.png"
+              alt="Ігор Дем'яненко"
             />
           </div>
         </section>

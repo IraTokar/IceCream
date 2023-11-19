@@ -1,9 +1,17 @@
 .customer-reviews {
     background-image: url(../images/background/back-mobile.jpg);
-    background-position: 10%;
-    background-size: auto;
+    background-position: 70%;
+    background-size: cover;
 
     padding-bottom: 409px;
+
+    @include mq(desktop) {
+        background-position: 50%;
+        background-size: cover;
+
+        padding-bottom: 228px;
+    }
+
 
 }
 
@@ -13,13 +21,21 @@
     padding-right: 80px;
 
     @include mq(min-only) {
+        padding-top: 174px;
         padding-left: 0px;
         padding-right: 0px;
     }
 
     @include mq(tablet-only) {
+        padding-top: 283px;
         padding-left: 0px;
         padding-right: 0px;
+    }
+
+    @include mq(desktop) {
+        padding-top: 464px;
+        padding-left: 113px;
+        padding-right: 113px;
     }
 }
 
@@ -43,6 +59,10 @@
     @include mq(tablet-only) {
         padding: 28px 80px;
     }
+
+    @include mq(desktop) {
+        padding: 43px 109px;
+    }
 }
 
 .customer-desc {
@@ -52,12 +72,18 @@
     font-weight: 400;
     line-height: 3.06;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 2.6;
         letter-spacing: 0.56px;
+    }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        line-height: 3;
+        letter-spacing: 0.64px;
     }
 }
 
@@ -70,10 +96,14 @@
 
     margin-bottom: 12px;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         font-size: 16px;
         
         margin-bottom: 32px;
+    }
+
+    @include mq(desktop) {
+        line-height: 3;
     }
 }
 

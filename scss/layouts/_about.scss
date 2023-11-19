@@ -16,6 +16,13 @@
         padding-left: 32px;
         padding-right: 32px;
     }
+
+    @include mq(desktop) {
+        padding-left: 17px;
+        padding-right: 17px;
+
+        padding-bottom: 146px;
+    }
 }
 
 .about-appertitle {
@@ -29,8 +36,13 @@
     margin-bottom: 12px;
     width: 210px;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         width: 100%;
+    }
+
+    @include mq(desktop) {
+        font-size: 30px;
+        letter-spacing: 1.2px;
     }
 }
 
@@ -51,6 +63,14 @@
         width: 100%;
 
         margin-bottom: 80px;
+    }
+
+    @include mq(desktop) {
+        width: 100%;
+        font-size: 36px;
+        letter-spacing: 2.16px;
+
+        margin-bottom: 172px;
     }
 }
 
@@ -77,6 +97,13 @@
         top: 214px;
     }
 
+    @include mq(desktop) {
+        width: 490px;
+        height: 490px;
+
+        right: 693px;
+    }
+
     &::before {
         position: absolute;
         right: 0px;
@@ -88,6 +115,13 @@
 
         background-image: url(../images/about/caw-sm.png);
         background-size: cover;
+
+        @include mq(desktop) {
+            width: 490px;
+            height: 490px;
+
+            top: 39px;
+        }
     }
 }
 
@@ -98,17 +132,32 @@
     @include mq(tablet-only) {
         width: 334px;
         margin-left: auto;  
-    }       
+    }      
+    
+    @include mq(desktop) {
+        width: 463px;
+        margin-left: auto; 
+        
+        margin-right: 105px;
+    }     
 }
         
 
 .about-text {
     margin-bottom: 24px;
     align-items: end;
+
+    @include mq(desktop) {
+        margin-bottom: 54px;  
+    }     
 }
 
 .about-content-item:not(:last-child) {
     margin-bottom: 4px;
+
+    @include mq(desktop) {
+        margin-bottom: 8px;  
+    }   
 }
 
 .about-desc {
@@ -119,9 +168,14 @@
     line-height: 2.11;
     letter-spacing: 0.48px;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         text-align: start;
     }
+
+    @include mq(desktop) {
+        font-size: 14px; 
+    }   
+        
 
     
 }
@@ -144,7 +198,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         margin-left: 0px;
     }
 }

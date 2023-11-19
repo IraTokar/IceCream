@@ -2,15 +2,23 @@
     padding: 0px 100px;
     padding-bottom: 81px;
 
-    @include mq(min-only) {
+    @include mq(min-only) {       
         padding-left: 45px;
         padding-right: 45px;
+        padding-bottom: 68px;
     }
 
     @include mq(tablet-only) {
         padding-left: 76px;
         padding-right: 76px;
         padding-bottom: 204px;
+    }
+
+    @include mq(desktop) {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        padding-bottom: 178px;
     }
 }
 
@@ -24,6 +32,10 @@
         gap: 80px;
         flex-direction: row;
     }
+
+    @include mq(desktop) {
+        flex-direction: row;
+    }
 }
 
 .advantages-item {
@@ -34,6 +46,10 @@
 
     @include mq(tablet-only) {
         flex-basis: calc((100% - 2*80px)/3);
+    }
+
+    @include mq(desktop) {
+        flex-basis: calc((100% - 2*16px)/3);
     }
 }
 
@@ -57,6 +73,11 @@
     @include mq(tablet-only) {
         margin-bottom: 32px;
         right: -51px;
+    }
+
+    @include mq(desktop) {
+        margin-bottom: 40px;
+        right: -159px;
     }
 
     &::before {
@@ -106,6 +127,13 @@
         font-size: 48px;
         letter-spacing: 1.92px;
     }
+
+    @include mq(desktop) {
+        font-size: 58px;
+        letter-spacing: 2.32px;
+
+        margin-bottom: 12px;
+    }
 }
 
 .advantages-item-desc {
@@ -117,6 +145,10 @@
 
     @include mq(tablet-only) {
         margin-bottom: 32px;
-        line-height: 1,74;
+        line-height: 1.74;
+    }
+
+    @include mq(desktop) {
+        font-size: 17px;  
     }
 }

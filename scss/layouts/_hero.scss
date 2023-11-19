@@ -40,11 +40,13 @@
 
     @include mq(desktop) {
         background: url(../images/hero/background-lg.png) no-repeat right bottom;
-        // background-size: 320px;
+        background-size: 1200px;
+
+        height: 591px;
 
         @include mq(retina) {
             background: url(../images/hero/background-lg@2x.png) no-repeat right bottom;
-            // background-size: 330px;
+            background-size: 1200px;
         }
     }
 
@@ -66,6 +68,14 @@
     width: 247px;
 
     margin-bottom: 32px;
+
+    @include mq(desktop) {
+        font-size: 38px;
+        letter-spacing: 1.52px;
+        width: 367px;
+
+        margin-bottom: 28px;
+    }    
 }
 
 .button-hero {
@@ -80,6 +90,15 @@
     line-height: normal;
 
     margin-bottom: 12px;
+
+    @include mq(desktop) {
+        padding: 12px 34px;
+        font-size: 14px;
+        line-height: 1.28;
+
+        margin-bottom: 50px;
+        margin-right: 12px;
+    }    
 }
 
 .button-anchor {
@@ -89,6 +108,10 @@
     font-weight: 600;
     line-height: normal;
     text-decoration-line: underline;
+
+    @include mq(desktop) {
+        font-size: 14px;   
+    }    
 }
 
 .hero-hidden-content {
@@ -117,6 +140,14 @@
     display: flex;
     flex-direction: column;
     gap: 29px;
+
+    @include mq(desktop) {
+        font-size: 13px; 
+        width: 200px;
+        gap: 24px;
+
+        padding-top: 30px;
+    }  
 }
 
 .hero-arrow-icon {
@@ -136,6 +167,13 @@
     @include mq(mobile-only) {
         display: none;
     }
+
+    @include mq(desktop) {
+        width: 225px;
+        height: 225px;
+
+        margin-right: 16px;
+    }  
 }
 
 .hero-img {
@@ -167,7 +205,7 @@
         width: 456px;
         height: 560px;
 
-        right: 56px;
+        right: 80px;
     }
 }
 
@@ -186,6 +224,11 @@
         display: none;
     }
 
+    @include mq(desktop) {
+        padding-top: 22px;
+        gap: 16px;
+    }
+
 }
 
 .header-statistics-item {
@@ -201,6 +244,12 @@
     text-transform: uppercase;
 
     margin-bottom: 4px;
+
+    @include mq(desktop) {
+        font-size: 46px;
+        letter-spacing: 1.84px;
+    }
+
 }
 
 .statistics-desc {
@@ -208,6 +257,10 @@
     font-size: 8px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;    
+    line-height: normal; 
+    
+    @include mq(desktop) {
+        font-size: 14px;
+    }
 }
 

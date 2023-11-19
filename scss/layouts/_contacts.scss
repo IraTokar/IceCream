@@ -1,5 +1,10 @@
 .contacts {
     transform: translateY(-349px);
+
+    @include mq(desktop) {
+        transform: translateY(-128px);
+    }
+
 }
 .contacts-container {
     padding-left: 80px;
@@ -14,17 +19,28 @@
         padding-left: 32px;
         padding-right: 32px;
     }
+
+    @include mq(desktop) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
 }
 
 .contacts-list {
     margin-bottom: 24px;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         display: flex;
         justify-content: center;
 
         gap: 16px;
         margin-bottom: 40px;
+    }
+
+    @include mq(desktop) {
+        gap: 32px;
+        margin-bottom: 60px;
     }
 }
 
@@ -38,7 +54,7 @@
     &:not(:last-child) {
         margin-bottom: 16px;
 
-        @include mq(tablet-only) {
+        @include mq(tablet) {
             margin-bottom: 0px;
         }
     }
@@ -46,7 +62,11 @@
     @include mq(tablet-only) {
         flex-basis: calc((100% - 2*16px)/3);
         padding: 40px 24px 40px 24px;
-        width: 224px;
+    }
+
+    @include mq(desktop) {
+        flex-basis: calc((100% - 2*32px)/3);
+        padding: 40px;
     }
 }
 
@@ -65,7 +85,7 @@
         
     margin-bottom: 20px;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         font-size: 16px;
         // line-height: 2.24;
         letter-spacing: 0.64px;
@@ -73,6 +93,11 @@
         padding: 4px 13px;
         margin-bottom: 32px;
         border-radius: 6px;
+    }
+
+    @include mq(desktop) {
+        padding: 4px 14px;
+        margin-bottom: 36px;
     }
 }
 
@@ -92,13 +117,20 @@
 
         margin-bottom: 12px;
     }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        line-height: 3;
+        letter-spacing: 0.64px;
+        margin-bottom: 8px;
+    }
 }
 
 
 .contact-map-box {
     margin-bottom: 48px;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         margin-bottom: 64px;
     }
 }
@@ -115,6 +147,12 @@
         line-height: 2.56;
         letter-spacing: 0.56px;
     }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        line-height: 2.9;
+        letter-spacing: 0.64px;
+    }
 }
 
 .contact-hours-list {
@@ -122,7 +160,7 @@
 
     margin-bottom: 48px;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         margin-bottom: 64px;
     }
 
@@ -134,9 +172,13 @@
         height: 1px;
         background-color: #e1e1e1;
 
-        @include mq(tablet-only) {
+        @include mq(tablet) {
             top: -32px;
             width: 176px;
+        }
+
+        @include mq(desktop) {
+            width: 288px;
         }
     }
 
@@ -151,6 +193,10 @@
         @include mq(tablet-only) {
             bottom: -32px;
             width: 176px;
+        }
+
+        @include mq(desktop) {
+            width: 288px;
         }
     }
 
@@ -172,6 +218,12 @@
         font-size: 14px;
         line-height: 2.6;
     }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        line-height: 3;
+        letter-spacing: 0.64px;
+    }
 } 
 
 .contact-hour {
@@ -183,6 +235,11 @@
     @include mq(tablet-only) {
         font-size: 14px;
         line-height: 2.6;
+    }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        line-height: 3;
     }
 }
 
@@ -197,12 +254,17 @@
         font-size: 14px;
         line-height: 2.1;
     }
+
+    @include mq(desktop) {
+        font-size: 16px;
+        line-height: 2.4;
+    }
 }
 
 .contact-tel {
     margin-bottom: 6px;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         margin-bottom: 4px;
     }
 }
@@ -210,7 +272,7 @@
 // Contacts buttons
 
 .contacts-buttons {
-    @include mq(tablet-only) {
+    @include mq(tablet) {
         display: flex;
         justify-content: center;
         gap: 16px;
@@ -266,6 +328,10 @@
 
     @include mq(tablet-only) {
         margin-bottom: 40px;
+    }
+
+    @include mq(desktop) {
+        margin-bottom: 120px;
     }
 }
 

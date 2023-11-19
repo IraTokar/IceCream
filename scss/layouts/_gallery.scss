@@ -6,13 +6,46 @@
     position: absolute;
     top: 0;
     bottom: 0;
+
     transform: translateY(-49px);
+
+    @include mq(min-only) {
+        transform: translateY(-36px);
+    }
+
 
     @include mq(tablet-only) {
         transform: translateY(-144px);
+    }
+
+    @include mq(desktop) {
+        padding-right: 77px;
+        padding-left: 77px;
+
+        transform: translateY(-98px);
     }
 }
 
 .gallery-img {
     border-radius: 8px;
+
+    width: 440px;
+    height: 204px;
+
+    @include mq(min-only) {
+        width: 280px;
+        height: 130px;
+    }
+
+    @include mq(tablet-only) {
+        border-radius: 18px;
+        width: 704px;
+        height: 327px;
+    }
+
+    @include mq(desktop) {
+        border-radius: 24px;
+        width: 1013px;
+        height: 422px;
+    }
 }
