@@ -1,7 +1,7 @@
 .products {
     background-image: url(../images/background/back-mobile.jpg);
-    background-position: 200%;
-    background-size: auto;
+    background-position: 70%;
+    background-size: cover;
 
     padding-top: 60px;
     padding-bottom: 60px;
@@ -198,6 +198,13 @@
     content: "";
     bottom: 16px;
     left: 140px;
+
+    transition: scale var(--animation);
+
+    &:hover,
+    &:focus {
+        transform: scale(1.25);
+    }
 
     @include mq(min-only) {
         left: 120px;

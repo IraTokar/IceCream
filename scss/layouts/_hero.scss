@@ -3,8 +3,9 @@
     background-size: 330px;
 
     padding-top: 40px;
+    padding-bottom: 150px;
 
-    height: 355px;
+    // height: 355px;
 
     position: relative;
 
@@ -17,8 +18,8 @@
         background: url(../images/hero/background-sm.png) no-repeat right bottom;
         background-size: 320px;
 
-        height: 440px;
         padding-top: 50px;
+        padding-bottom: 236px;
 
         @include mq(retina) {
             background: url(../images/hero/background-sm@2x.png) no-repeat right bottom;
@@ -31,6 +32,7 @@
         background-size: 768px;
 
         padding-top: 12px;
+        padding-bottom: 12px;
 
         @include mq(retina) {
             background: url(../images/hero/background-md@2x.png) no-repeat right bottom;
@@ -42,7 +44,7 @@
         background: url(../images/hero/background-lg.png) no-repeat right bottom;
         background-size: 1200px;
 
-        height: 591px;
+        padding-bottom: 65px;
 
         @include mq(retina) {
             background: url(../images/hero/background-lg@2x.png) no-repeat right bottom;
@@ -78,7 +80,26 @@
     }    
 }
 
-.button-hero {
+.hero-links-list {
+    display: flex;
+}
+
+.hero-list-item {
+    margin-bottom: 12px;
+    margin-right: 12px;
+
+    @include mq(tablet-only) {
+        margin-right: 25px;
+        margin-bottom: 30px;
+    }
+
+    @include mq(desktop) {
+        margin-bottom: 50px;
+        margin-right: 25px;
+    }
+}
+
+.hero-link {
     border-radius: 8px;
     border: 2px solid var(--accent-color);
     padding: 11px 26px;
@@ -89,25 +110,51 @@
     font-weight: 600;
     line-height: normal;
 
-    margin-bottom: 12px;
+    transition: border-color var(--animation);
+
+    &:hover {
+        border-color: #0A8817;
+    }
 
     @include mq(desktop) {
         padding: 12px 34px;
         font-size: 14px;
         line-height: 1.28;
 
-        margin-bottom: 50px;
-        margin-right: 12px;
+        transition: border-color var(--animation), color var(--animation);
+
+        &:focus {
+            border-color: #0A8817;
+            color: var(--main-text-color);
+        }
+
+        &:disabled {
+            border-color: #ABABAB;
+        }
     }    
 }
 
-.button-anchor {
+.hero-anchor-link {
     color: var(--accent-color);
     text-align: center;
     font-size: 12px;
     font-weight: 600;
     line-height: normal;
     text-decoration-line: underline;
+
+    transition: color var(--animation);
+
+    &:hover {
+        color: #0A8817;
+    }
+
+    &:focus {
+        color: var(--main-text-color);
+    }
+
+    &:disabled {
+        color: #ABABAB;
+    }
 
     @include mq(desktop) {
         font-size: 14px;   
@@ -150,8 +197,18 @@
     }  
 }
 
+.hero-arrow-button {
+    text-align: left;
+}
+
 .hero-arrow-icon {
     fill: var(--main-text-color);
+    transition: scale var(--animation);
+
+    &:hover,
+    &:focus {
+        transform: scale(1.25);
+    }
 }
 
 .hero-ice-cream {
@@ -182,30 +239,37 @@
     right: 27px;
     content: '';
 
+    width: 218px;
+
     margin-right: auto;
 
-    width: 218px;
-    height: 267px;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
 
     @include mq(min-only) {
         width: 177px;
-        height: 217px;
-
         right: 56px;
     }
 
     @include mq(tablet-only) {
         width: 268px;
-        height: 329px;
-
         right: 90px;
     }
 
     @include mq(desktop) {
         width: 456px;
-        height: 560px;
-
         right: 80px;
+    }
+}
+
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
 

@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IceCream</title>
 
-    <link />
+    <!-- <link rel="icon" type="image/png" sizes="180X" href="" /> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,40 +28,102 @@
 
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <!-- Header -->
     <header class="header">
       <div class="container header-container">
-        <a class="logo link" href="#">
-          <img
-            class="logo-img"
-            src="./images/logo/logo-sm.png"
-            alt="Log IceCream"
-            width="48"
-            height="44"
-          />
+        <a class="logo link" href="./index.html">
+          <picture>
+            <source
+              srcset="./images/logo/logo-md-lg.png 1x, ./images/logo/logo-md-lg@2x.png 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./images/logo/logo-sm.png 1x, ./images/logo/logo-sm@2x.png 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="logo-img"
+              src="./images/logo/logo-sm.png"
+              alt="Log IceCream"
+              width="48"
+              height="44"
+            />
+          </picture>
         </a>
 
         <ul class="header-navigation list">
           <li class="header-navigation-item">
-            <a class="header-navigation-link link" href="#">Home</a>
+            <a class="header-navigation-link link" href="#home">Home</a>
           </li>
           <li class="header-navigation-item">
-            <a class="header-navigation-link link" href="#">How it’s made?</a>
+            <a class="header-navigation-link link" href="#about">How it’s made?</a>
           </li>
           <li class="header-navigation-item">
-            <a class="header-navigation-link link" href="#">Our products</a>
+            <a class="header-navigation-link link" href="#products">Our products</a>
           </li>
           <li class="header-navigation-item">
-            <a class="header-navigation-link link" href="#">Contact</a>
+            <a class="header-navigation-link link" href="#contacts">Contact</a>
           </li>
         </ul>
 
-        <button class="menu-button button" type="button">
+        <button class="menu-button button js-open-menu" type="button" aria-expanded="false">
           <svg class="menu-icon" width="32" height="32">
             <use href="./images/sprite.svg#icon-open"></use>
           </svg>
         </button>
+
+        <div class="menu-container js-menu-container" id="header-navigation">
+          <div class="menu-head">
+            <a class="logo link" href="./index.html">
+              <picture>
+                <source
+                  srcset="./images/logo/logo-md-lg.png 1x, ./images/logo/logo-md-lg@2x.png 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/logo/logo-sm.png 1x, ./images/logo/logo-sm@2x.png 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="logo-img"
+                  src="./images/logo/logo-sm.png"
+                  alt="Log IceCream"
+                  width="48"
+                  height="44"
+                />
+              </picture>
+            </a>
+            <button class="menu-button button js-close-menu" type="button" aria-expanded="false">
+              <svg class="menu-icon" width="32" height="32">
+                <use href="./images/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+
+          <ul class="menu-navigation menu-navigation-list list">
+            <li class="menu-navigation-item">
+              <a class="menu-navigation-link link" href="#home">Home</a>
+            </li>
+            <li class="menu-navigation-item">
+              <a class="menu-navigation-link link" href="#about">How it’s made?</a>
+            </li>
+            <li class="menu-navigation-item">
+              <a class="menu-navigation-link link" href="#products">Our products</a>
+            </li>
+            <li class="menu-navigation-item">
+              <a class="menu-navigation-link link" href="#contacts">Contact</a>
+            </li>
+          </ul>
+
+          <button class="modal-menu-button button">
+            Buy now
+            <svg class="about-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
 
         <button class="header-button button">
           Buy now
@@ -71,13 +137,19 @@
     <!-- Main -->
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="container">
           <div class="hero-content">
             <div>
               <h1 class="hero-title">ice cream made with passion</h1>
-              <button class="button-hero button" type="button">Products</button>
-              <button class="button-anchor button" type="button">How it’s made?</button>
+              <ul class="hero-links-list list">
+                <li class="hero-list-item">
+                  <a class="hero-link link" href="#products">Products</a>
+                </li>
+                <li class="hero-list-item">
+                  <a class="hero-anchor-link link" href="#about">How it’s made?</a>
+                </li>
+              </ul>
             </div>
             <ul class="header-statistics list">
               <li class="header-statistics-item">
@@ -94,65 +166,61 @@
             <picture>
               <source
                 srcset="
-                  ./images/hero/many-ice-cream-lg.png  1x,
-                  images/hero/many-ice-cream-lg@2x.png 2x
+                  ./images/hero/many-ice-cream-lg.png    1x,
+                  ./images/hero/many-ice-cream-lg@2x.png 2x
                 "
-                sizes="(min-width:1200px) 456px"
-                type="image/png"
+                media="(min-width: 1200px)"
               />
               <source
                 srcset="
-                  ./images/hero/many-ice-cream-md.png  1x,
-                  images/hero/many-ice-cream-md@2x.png 2x
+                  ./images/hero/many-ice-cream-md.png    1x,
+                  ./images/hero/many-ice-cream-md@2x.png 2x
                 "
-                sizes="(min-width:768px) 268px"
-                type="image/png"
+                media="(min-width: 768px)"
               />
               <img
                 class="hero-ice-cream"
                 src="./images/hero/many-ice-cream-md.png"
-                alt="plate with Ice cream"
+                alt="Plate with ice cream"
               />
             </picture>
-
             <div class="hero-text">
               <p>
                 Indulge in a scoop of ice cream made with passion and treat your taste buds to an
                 unforgettable experience!
               </p>
-              <svg class="arrow-icon hero-arrow-icon" width="40" height="16">
-                <use href="./images/sprite.svg#icon-Arrow"></use>
-              </svg>
+              <button class="hero-arrow-button button" type="button">
+                <svg class="arrow-icon hero-arrow-icon" width="40" height="16">
+                  <use href="./images/sprite.svg#icon-Arrow"></use>
+                </svg>
+              </button>
             </div>
           </div>
 
           <picture>
             <source
               srcset="./images/hero/ice-cream-lg.png 1x, ./images/hero/ice-cream-lg@2x.png 2x"
-              sizes="(min-width:1200px) 456px"
-              type="image/png"
+              media="(min-width: 1200px)"
             />
             <source
               srcset="./images/hero/ice-cream-md.png 1x, ./images/hero/ice-cream-md@2x.png 2x"
-              sizes="(min-width:768px) 268px"
-              type="image/png"
+              media="(min-width: 768px)"
             />
             <source
               srcset="./images/hero/ice-cream-480.png 1x, ./images/hero/ice-cream-480@2x.png 2x"
-              sizes="(min-width:480px) 218px"
-              type="image/png"
+              media="(min-width: 480px)"
             />
             <source
               srcset="./images/hero/ice-cream-sm.png 1x, ./images/hero/ice-cream-sm@2x.png 2x"
-              type="image/png"
+              media="(max-width: 479px)"
             />
-            <img class="hero-img" src="./images/hero/ice-cream-sm.png" alt="Image Ice cream" />
+            <img class="hero-img" src="./images/hero/ice-cream-480.png" alt="Ice cream" />
           </picture>
         </div>
       </section>
 
       <!-- products section -->
-      <section class="products">
+      <section class="products" id="products">
         <div class="container">
           <p class="products-appertitle">100% natural</p>
           <h2 class="products-title">products</h2>
@@ -204,7 +272,7 @@
       </section>
 
       <!-- about section -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <p class="about-appertitle">tradition and love</p>
           <h2 class="about-title">how it’s made?</h2>
@@ -242,7 +310,7 @@
       </section>
 
       <!-- adventages section -->
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="container advantages-container">
           <h2 class="visually-hidden">advantages</h2>
           <ul class="advantages-list list">
@@ -273,60 +341,84 @@
 
       <!-- Gallery section -->
       <div class="gallery-wrapper">
-        <section class="gallery">
-          <div class="container">
+        <section class="gallery" id="gallery">
+          <div class="container gallery-container">
             <h2 class="gallery-title visually-hidden">gallery</h2>
-            <!-- <picture>
-              <source
-                srcset="./images/gallery/gallery-sm.png 1x, ./images/gallery/gallery-sm@2x.png 2x"
-                sizes="(max-width:479px) 280px"
-                type="image/png"
-              />
-              <source
-                srcset="./images/gallery/gallery-480.png 1x, ./images/gallery/gallery-480@2x.png 2x"
-                sizes="(min-width:480px) 440px"
-                type="image/png"
-              />
-              <source
-                srcset="./images/gallery/gallery-md.png 1x, ./images/gallery/gallery-md@2x.png 2x"
-                sizes="(min-width:768px) 704px"
-                type="image/png"
-              />
-              <source
-                srcset="./images/gallery/gallery-lg.png 1x, ./images/gallery/gallery-lg@2x.png 2x"
-                sizes="(min-width:1200px) 1013"
-                type="image/png"
-              />
-
-              <img
-                class="gallery-img"
-                src="./images/gallery/gallery-sm.png"
-                alt="Image Ice cream"
-              />
-            </picture> -->
-            <img
-              class="gallery-img"
-              srcset="
-                  ./images/gallery/gallery-sm.png    280w,
-                  ./images/gallery/gallery-sm@2x.png 560w,
-                  ./images/gallery/gallery-480.png   440w,
-                  ./images/gallery/gallery-480@2x.png 880,
-                  ./images/gallery/gallery-md.png    704w,
-                  ./images/gallery/gallery-md@2x.png 1408w,
-                  ./images/gallery/gallery-lg.png 1013w,
-                  ./images/gallery/gallery-lg@2x.png 2026w
-
-                "
-              sizes="(min-width:1200px) 1013px, (min-width:768px) 704px, (min-width:480px) 440px, 100vw"
-              src="./images/gallery/gallery-sm.png"
-              alt="Ігор Дем'яненко"
-            />
+            <ul class="gallerry-list list">
+              <li class="gallery-item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/gallery-img1-lg.jpg    1x,
+                      ./images/gallery/gallery-img1-lg@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/gallery-img1-md.jpg    1x,
+                      ./images/gallery/gallery-img1-md@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/gallery-img1-480.jpg    1x,
+                      ./images/gallery/gallery-img1-480@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/gallery-img1-sm.jpg    1x,
+                      ./images/gallery/gallery-img1-sm@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)"
+                  />
+                  <img
+                    class="gallery-img"
+                    src="./images/gallery/gallery-img1-480.jpg"
+                    alt="Ice cream with blueberries"
+                  />
+                </picture>
+              </li>
+              <li class="gallery-item visually-hidden">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/gallery-img2.jpg    1x,
+                      ./images/gallery/gallery-img2@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="gallery-img"
+                    src="./images/gallery/gallery-img2.jpg"
+                    alt="Ice cream with candys"
+                  />
+                </picture>
+              </li>
+              <li class="gallery-item visually-hidden">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/gallery-img3.jpg    1x,
+                      ./images/gallery/gallery-img3@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="gallery-img"
+                    src="./images/gallery/gallery-img2.jpg"
+                    alt="Ice cream with cherry"
+                  />
+                </picture>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
 
       <!-- Customer-reviews section -->
-      <section class="customer-reviews">
+      <section class="customer-reviews" id="customer-reviews">
         <div class="container">
           <div class="customer-review">
             <h2 class="customer-title visually-hidden">customer-review</h2>
@@ -360,7 +452,7 @@
       </section>
 
       <!-- Contacts section -->
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container contacts-container">
           <h2 class="contacts-title visually-hidden">our contacts</h2>
           <ul class="contacts-list list">
@@ -472,21 +564,39 @@
         <p class="footer-text">with passion</p>
         <ul class="footer-socials list">
           <li class="footer-social">
-            <a class="footer-social-link link" href="#">
+            <a
+              class="footer-social-link link"
+              href="https://github.com/"
+              target="_blank"
+              rel="noreply no-referrer"
+              aria-label="Icon Github"
+            >
               <svg class="footer-social-icon" width="34" height="34">
                 <use href="./images/sprite.svg#icon-github"></use>
               </svg>
             </a>
           </li>
           <li class="footer-social">
-            <a class="footer-social-link link" href="#">
+            <a
+              class="footer-social-link link"
+              href="https://web.telegram.org/"
+              target="_blank"
+              rel="noreply no-referrer"
+              aria-label="Icon Telegram"
+            >
               <svg class="footer-social-icon" width="34" height="34">
                 <use href="./images/sprite.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
           <li class="footer-social">
-            <a class="footer-social-link link" href="#">
+            <a
+              class="footer-social-link link"
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noreply no-referrer"
+              aria-label="Icon facebook"
+            >
               <svg class="footer-social-icon" width="34" height="34">
                 <use href="./images/sprite.svg#icon-facebook"></use>
               </svg>
@@ -503,5 +613,7 @@
         <p class="footer-copyright">All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script src="./js/menu-modal.js"></script>
   </body>
 </html>

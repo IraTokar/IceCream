@@ -2,6 +2,10 @@
     text-decoration: none;
     font-style: normal;
     color: currentColor;
+
+    transition: cursor var(--animation);
+
+    cursor: url(../images/icons/Cursor.svg), auto;
 }
 
 .list {
@@ -29,7 +33,10 @@ img {
 .button {
     text-align: center;
     border: none;
-    cursor: pointer;
-
+    
     background-color: transparent;
+
+    cursor: url(../images/icons/Cursor.svg), auto;
 }
+
+

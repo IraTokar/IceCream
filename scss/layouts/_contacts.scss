@@ -142,6 +142,11 @@
     line-height: 2.2;
     letter-spacing: 0.48px;
 
+    &:hover,
+    &:focus {
+        text-decoration-line: underline;
+    }
+
     @include mq(tablet-only) {
         font-size: 14px;
         line-height: 2.56;
@@ -301,6 +306,28 @@
     margin-left: auto;
     margin-bottom: 16px;
 
+    transition: background-color var(--animation), color var(--animation), fill var(--animation), border-color var(--animation);
+
+    &:hover {
+        background-color: #0A8817;
+        border-color: #0A8817;
+    }
+
+    &:focus {
+        background-color: #0A8817;
+        border-color: #0A8817;
+        color: var(--main-text-color);
+    }
+
+    &:disabled {
+        background-color: #ABABAB;
+        border-color: #ABABAB;
+    }
+
+    &:focus .about-icon {
+        fill: var(--main-text-color);
+    }
+
 }
 
 .contacts-button-franchise {
@@ -325,6 +352,26 @@
     margin-left: auto;
 
     margin-bottom: 60px;
+
+    animation: border-color var(--animation), color var(--animation), fill var(--animation);
+
+    &:hover {
+        border-color: #0A8817;
+    }
+
+    &:focus {
+        border-color: #0A8817;
+        color: var(--main-text-color);
+    }
+
+    &:disabled {
+        border-color: #ABABAB;
+    }
+
+    &:focus .about-icon {
+        fill: var(--main-text-color);
+    }
+
 
     @include mq(tablet-only) {
         margin-bottom: 40px;

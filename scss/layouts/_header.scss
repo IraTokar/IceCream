@@ -57,6 +57,11 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .menu-button {
@@ -70,11 +75,17 @@
     @include mq(desktop) {
         display: none;
     }
-
 }
 
 .menu-icon {
     fill: #fff;
+
+    transition: fill var(--animation);
+
+    &:hover {
+            fill: #131313;
+        }
+
 }
 
 .header-button {
@@ -99,6 +110,25 @@
     background-color: var(--accent-color);
 
     padding: 12px 35px;
+
+    transition: background-color var(--animation), color var(--animation), fill var(--animation);
+
+    &:hover {
+        background-color: #0A8817;
+    }
+
+    &:focus {
+        background-color: #0A8817;
+        color: var(--main-text-color);
+    }
+
+    &:disabled {
+        background-color: #ABABAB;
+    }
+
+    &:focus .about-icon {
+        fill: var(--main-text-color);
+    }
 
     @include mq(desktop) {
         margin-left: auto;

@@ -82,6 +82,15 @@
     }
 }
 
+.footer-social-icon {
+    fill: #84A178;
+
+    &:hover,
+    &:focus {
+        fill: var(--main-text-color);
+    }
+}
+
 .footer-contacts {
     display: flex;
     justify-content: flex-end;

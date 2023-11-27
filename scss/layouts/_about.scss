@@ -198,8 +198,27 @@
     margin-left: auto;
     margin-right: auto;
 
+    transition: background-color var(--animation), color var(--animation), fill var(--animation);
+
     @include mq(tablet) {
         margin-left: 0px;
+    }
+
+    &:hover {
+        background-color: #0A8817;
+    }
+
+    &:focus {
+        background-color: #0A8817;
+        color: var(--main-text-color);
+    }
+
+    &:disabled {
+        background-color: #ABABAB;
+    }
+
+    &:focus .about-icon {
+        fill: var(--main-text-color);
     }
 }
 
