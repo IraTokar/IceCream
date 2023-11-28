@@ -89,7 +89,6 @@
     border-radius: 50%;
 
     position: absolute;
-    left: 0;
     top: 170px;
 
     background: linear-gradient(0deg, rgba(248, 210, 78, 0.70) 0%, rgba(248, 210, 78, 0.70) 100%),
@@ -102,6 +101,7 @@
         height: 330px;
 
         top: 170px;
+        left: 0;
     }
 
     @include mq(desktop) {
@@ -109,6 +109,7 @@
         height: 490px;
 
         top: 170px; 
+        left: 0;
     }
 
     &::before {
