@@ -380,7 +380,7 @@ img {
   }
 }
 
-.hero {
+.hero-container {
   background: url(../images/hero/background-480.png) no-repeat right bottom;
   background-size: 330px;
   padding-top: 40px;
@@ -388,49 +388,49 @@ img {
   position: relative;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero {
+  .hero-container {
     background: url(../images/hero/background-480@2x.png) no-repeat right bottom;
     background-size: 330px;
   }
 }
 @media screen and (max-width: 479.98px) {
-  .hero {
-    background: url(../images/hero/background-sm.png) no-repeat right bottom;
+  .hero-container {
+    background: url(../images/hero/background-sm.png) no-repeat bottom;
     background-size: 320px;
     padding-top: 50px;
     padding-bottom: 236px;
   }
 }
 @media screen and (max-width: 479.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 479.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479.98px) and (min-resolution: 192dpi), screen and (max-width: 479.98px) and (min-resolution: 2dppx) {
-  .hero {
-    background: url(../images/hero/background-sm@2x.png) no-repeat right bottom;
+  .hero-container {
+    background: url(../images/hero/background-sm@2x.png) no-repeat bottom;
     background-size: 320px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .hero {
-    background: url(../images/hero/background-md.png) no-repeat right bottom;
+  .hero-container {
+    background: url(../images/hero/background-md.png) no-repeat bottom;
     background-size: 768px;
     padding-top: 12px;
     padding-bottom: 12px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199.98px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199.98px) and (min-resolution: 2dppx) {
-  .hero {
-    background: url(../images/hero/background-md@2x.png) no-repeat right bottom;
+  .hero-container {
+    background: url(../images/hero/background-md@2x.png) no-repeat bottom;
     background-size: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero {
-    background: url(../images/hero/background-lg.png) no-repeat right bottom;
+  .hero-container {
+    background: url(../images/hero/background-lg.png) no-repeat bottom;
     background-size: 1200px;
     padding-bottom: 65px;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
-    background: url(../images/hero/background-lg@2x.png) no-repeat right bottom;
+  .hero-container {
+    background: url(../images/hero/background-lg@2x.png) no-repeat bottom;
     background-size: 1200px;
   }
 }
@@ -1053,7 +1053,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 @media screen and (max-width: 479.98px) {
   .about {
@@ -1064,7 +1063,7 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about {
     padding-left: 32px;
-    padding-right: 32px;
+    padding-right: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1073,6 +1072,10 @@ img {
     padding-right: 17px;
     padding-bottom: 146px;
   }
+}
+
+.about-container {
+  position: relative;
 }
 
 .about-appertitle {
@@ -1084,6 +1087,8 @@ img {
   text-transform: uppercase;
   margin-bottom: 12px;
   width: 210px;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media screen and (min-width: 768px) {
   .about-appertitle {
@@ -1108,6 +1113,8 @@ img {
   text-transform: uppercase;
   margin-bottom: 372px;
   width: 210px;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about-title {
@@ -1125,33 +1132,29 @@ img {
 }
 
 .about-circle {
-  width: 278px;
+  width: 279px;
   height: 278px;
   border-radius: 50%;
   position: absolute;
-  right: 100px;
-  top: 240px;
+  left: 0;
+  top: 170px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(248, 210, 78, 0.7)), to(rgba(248, 210, 78, 0.7))), #D9D9D9;
   background: linear-gradient(0deg, rgba(248, 210, 78, 0.7) 0%, rgba(248, 210, 78, 0.7) 100%), #D9D9D9;
   -webkit-box-shadow: 0px 4.48583px 16.82185px 0px rgba(153, 114, 23, 0.25);
           box-shadow: 0px 4.48583px 16.82185px 0px rgba(153, 114, 23, 0.25);
 }
-@media screen and (max-width: 479.98px) {
-  .about-circle {
-    right: 25px;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about-circle {
-    right: 444px;
-    top: 214px;
+    width: 330px;
+    height: 330px;
+    top: 170px;
   }
 }
 @media screen and (min-width: 1200px) {
   .about-circle {
     width: 490px;
     height: 490px;
-    right: 693px;
+    top: 170px;
   }
 }
 .about-circle::before {
@@ -1164,11 +1167,35 @@ img {
   background-image: url(../images/about/caw-sm.png);
   background-size: cover;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .about-circle::before {
+    background-image: url(../images/about/caw-sm@2x.png);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .about-circle::before {
+    background-image: url(../images/about/caw-md.png);
+    width: 330px;
+    height: 330px;
+    top: 26px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199.98px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199.98px) and (min-resolution: 2dppx) {
+  .about-circle::before {
+    background-image: url(../images/about/caw-md@2x.png);
+  }
+}
 @media screen and (min-width: 1200px) {
   .about-circle::before {
+    background-image: url(../images/about/caw-lg.png);
     width: 490px;
     height: 490px;
     top: 39px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .about-circle::before {
+    background-image: url(../images/about/caw-lg@2x.png);
   }
 }
 
@@ -1180,6 +1207,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about-content {
@@ -1450,6 +1480,12 @@ img {
 
 .gallery-wrapper {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .gallery {
