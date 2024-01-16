@@ -117,7 +117,7 @@
             </li>
           </ul>
 
-          <button class="modal-menu-button button">
+          <button class="modal-menu-button button" type="button">
             Buy now
             <svg class="about-icon" width="12" height="12">
               <use href="./images/sprite.svg#icon-arrow-right"></use>
@@ -125,12 +125,90 @@
           </button>
         </div>
 
-        <button class="header-button button">
+        <button class="header-button button js-open-products">
           Buy now
           <svg class="about-icon" width="12" height="12">
             <use href="./images/sprite.svg#icon-arrow-right"></use>
           </svg>
         </button>
+
+        <div class="backdrop js-products-container">
+          <div class="modal-products-card">
+            <button
+              class="menu-products-button button js-close-products"
+              type="button"
+              aria-expanded="false"
+            >
+              <svg class="menu-icon-products" width="20" height="20">
+                <use href="./images/sprite.svg#icon-close-line"></use>
+              </svg>
+            </button>
+
+            <h2 class="products-card-title">Buy now</h2>
+
+            <ul class="products-cart-list list">
+              <li class="products-cart-item item">
+                <div class="products-circle circle-ice-cream"></div>
+                <input
+                  class="products-checkbox visually-hidden"
+                  type="checkbox"
+                  name="point"
+                  id="ice-cream"
+                />
+                <label class="products-check-label products-check-label-green lable" for="ice-cream"
+                  >ice cream</label
+                >
+              </li>
+              <li class="products-cart-item item">
+                <div class="products-circle circle-ice-coffe"></div>
+                <input
+                  class="products-checkbox visually-hidden"
+                  type="checkbox"
+                  name="point"
+                  id="ice-coffee"
+                />
+                <label
+                  class="products-check-label products-check-label-yellow lable"
+                  for="ice-coffee"
+                  >ice coffee</label
+                >
+              </li>
+              <li class="products-cart-item item">
+                <div class="products-circle circle-milkshakes"></div>
+                <input
+                  class="products-checkbox visually-hidden"
+                  type="checkbox"
+                  name="point"
+                  id="milkshakes"
+                />
+                <label
+                  class="products-check-label products-check-label-brown lable"
+                  for="milkshakes"
+                  >milkshakes</label
+                >
+              </li>
+            </ul>
+
+            <form class="products-form">
+              <label class="form-group" for="user-name">
+                <input class="form-input" type="text" name="user-name" placeholder="Name" />
+              </label>
+              <label class="form-group" for="user-phone">
+                <input class="form-input" type="number" name="user-phone" placeholder="Phone" />
+              </label>
+              <label class="form-group" for="user-comment">
+                <textarea
+                  class="form-input"
+                  name="user-comment"
+                  rows="4"
+                  placeholder="Comment"
+                ></textarea>
+              </label>
+            </form>
+
+            <button class="button products-form-buttom">Submit</button>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -199,20 +277,20 @@
 
           <picture>
             <source
-              srcset="./images/hero/ice-cream-lg.png 1x, ./images/hero/ice-cream-lg@2x.png 2x"
               media="(min-width: 1200px)"
+              srcset="./images/hero/ice-cream-lg.png 1x, ./images/hero/ice-cream-lg@2x.png 2x"
             />
             <source
-              srcset="./images/hero/ice-cream-md.png 1x, ./images/hero/ice-cream-md@2x.png 2x"
               media="(min-width: 768px)"
+              srcset="./images/hero/ice-cream-md.png 1x, ./images/hero/ice-cream-md@2x.png 2x"
             />
             <source
-              srcset="./images/hero/ice-cream-480.png 1x, ./images/hero/ice-cream-480@2x.png 2x"
               media="(min-width: 480px)"
+              srcset="./images/hero/ice-cream-480.png 1x, ./images/hero/ice-cream-480@2x.png 2x"
             />
             <source
-              srcset="./images/hero/ice-cream-sm.png 1x, ./images/hero/ice-cream-sm@2x.png 2x"
               media="(max-width: 479px)"
+              srcset="./images/hero/ice-cream-sm.png 1x, ./images/hero/ice-cream-sm@2x.png 2x"
             />
             <img class="hero-img" src="./images/hero/ice-cream-480.png" alt="Ice cream" />
           </picture>
@@ -614,6 +692,7 @@
       </div>
     </footer>
 
-    <script src="./js/menu-modal.js"></script>
+    <script src="./js/menu-modal.js" type="module"></script>
+    <script src="./js/product-modal.js" type="module"></script>
   </body>
 </html>

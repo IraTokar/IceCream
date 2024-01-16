@@ -22,6 +22,7 @@
         background-image: url(../images/background/back-desctop.jpg);
         background-position: 50%;
         background-size: cover;
+        
 
         @include mq(retina) {
             background-image: url(../images/background/back-desctop@2x.jpg);
@@ -232,7 +233,7 @@
     @include mq(min-only) {
         right: 40px;
     }
-
+    
     @include mq(tablet-only) {
         top: -108px;
         right: 12px;

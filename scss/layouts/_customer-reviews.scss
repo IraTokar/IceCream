@@ -5,11 +5,28 @@
 
     padding-bottom: 409px;
 
-    @include mq(desktop) {
-        background-position: 50%;
-        background-size: cover;
 
+    @include mq(retina) {
+        background-image: url(../images/background/back-mobile@2x.jpg);
+    }
+
+    @include mq(tablet-only) {
+        background-image: url(../images/background/back-tablet.jpg);
+
+        @include mq(retina) {
+            background-image: url(../images/background/back-tablet@2x.jpg);
+        }
+    }
+
+    @include mq(desktop) {
+        background-image: url(../images/background/back-desctop.jpg);
+        background-position: 30%;
+        background-size: cover;
         padding-bottom: 228px;
+
+        @include mq(retina) {
+            background-image: url(../images/background/back-desctop@2x.jpg);
+        }
     }
 
 
